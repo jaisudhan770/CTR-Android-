@@ -1,0 +1,393 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><script src="config.js"></script><meta name="theme-color" content="#05070c">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>CTR – conquer the race</title>
+<style>
+:root{--logo:url("data:image/png;base64,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");--bg:#05070c;--card:#0d121a;--tx:#eef2f8;--mut:#8a94a6;--ac:#3b82f6;--on:#fff;--bd:#1c2430;color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.45 -apple-system,system-ui,"Segoe UI",Roboto,sans-serif}
+main{max-width:520px;margin:0 auto;padding:16px 16px 96px}
+h1{font-size:22px;margin:4px 0 14px;letter-spacing:-.5px}h1 b{color:var(--ac)}
+h2{font-size:15px;margin:18px 0 8px;color:var(--mut);font-weight:600}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:16px;padding:14px;margin-bottom:12px}
+.big{font-size:56px;font-weight:700;letter-spacing:-2px;text-align:center;font-variant-numeric:tabular-nums}
+.row{display:flex;gap:8px}.row>*{flex:1}
+.stat{text-align:center}.stat b{display:block;font-size:24px;font-variant-numeric:tabular-nums}.stat span{font-size:12px;color:var(--mut)}
+button,select,input{font:inherit;color:var(--tx)}
+button{border:0;border-radius:12px;padding:12px 14px;background:var(--ac);color:var(--on);font-weight:700;cursor:pointer}
+button.alt{background:var(--bd);color:var(--tx)}button:disabled{opacity:.5}
+input,select{width:100%;padding:11px;border-radius:12px;border:1px solid var(--bd);background:var(--bg)}
+.sec{display:none}.sec.on{display:block}
+nav{position:fixed;left:0;right:0;bottom:0;display:flex;background:var(--card);border-top:1px solid var(--bd);padding:6px 6px calc(6px + env(safe-area-inset-bottom,0px))}
+nav button{flex:1;background:none;color:var(--mut);font-size:11px;padding:6px 0;font-weight:600}nav button span{display:block;font-size:20px}nav button.on{color:var(--ac)}
+.msg{padding:10px 12px;border-radius:14px;margin:6px 0;max-width:88%;white-space:pre-wrap}
+.me{background:var(--ac);color:var(--on);margin-left:auto}.ai{background:var(--bd)}
+.li{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--bd)}.li:last-child{border:0}
+.out{white-space:pre-wrap}.mut{color:var(--mut);font-size:13px}
+.bar{height:10px;border-radius:6px;background:var(--bd);overflow:hidden}.bar i{display:block;height:100%;background:var(--ac)}
+#ob{position:fixed;inset:0;z-index:20;background:radial-gradient(120% 55% at 50% 0,#10213f,#05070c 62%);display:flex;flex-direction:column;padding:calc(12px + env(safe-area-inset-top,0px)) 18px calc(14px + env(safe-area-inset-bottom,0px))}
+#ob[hidden]{display:none}#obtop{display:flex;gap:12px;align-items:center}
+.ic{width:36px;height:36px;border-radius:50%;padding:0;background:var(--card);color:var(--tx)}
+.pg{flex:1;height:4px;background:var(--bd);border-radius:4px}.pg i{display:block;height:100%;background:var(--ac);border-radius:4px;transition:width .3s}
+#obm{flex:1;overflow:auto;padding:22px 0}.oh{font-size:30px;line-height:1.1;margin:0 0 10px;letter-spacing:-.5px}
+.opts{display:grid;gap:10px;margin-top:18px}.opt{text-align:left;background:var(--card);border:1px solid var(--bd);color:var(--tx);padding:14px}
+.opt small{display:block;color:var(--mut);font-weight:400;margin-top:2px}
+.opt.sel,.chip.sel,.dot.sel{background:var(--ac);color:#fff;border-color:var(--ac)}.opt.sel small{color:#dbe8ff}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}.chip{background:var(--card);border:1px solid var(--bd);color:var(--tx);border-radius:999px;padding:9px 14px}
+.dots{display:flex;justify-content:space-between;margin:18px 0 6px}.dot{width:40px;height:40px;border-radius:50%;padding:0;background:var(--card);border:1px solid var(--bd);color:var(--tx)}
+.btn{width:100%;background:linear-gradient(180deg,#60a5fa,#2563eb);color:#fff;padding:15px;font-size:17px}
+.lnk{background:none;color:var(--mut);width:100%;margin-top:6px}.kick{color:var(--ac);font-size:12px;letter-spacing:1px;font-weight:700;margin:0}
+.tbig{font-size:64px;font-weight:700;text-align:center;color:var(--ac);margin:30px 0 10px;letter-spacing:-2px}
+.row select{font-size:28px;text-align:center}.badge{background:var(--ac);color:#fff;font-size:11px;padding:2px 8px;border-radius:8px;font-weight:700}
+.ring{width:84px;height:84px;border-radius:50%;margin:14px auto;display:grid;place-items:center;font-size:26px;font-weight:700;background:conic-gradient(var(--ac) calc(var(--p)*1%),var(--bd) 0)}.ring span{width:68px;height:68px;border-radius:50%;background:var(--bg);display:grid;place-items:center}
+.warn{color:#f59e0b}.ok{color:var(--ac)}.ob2{display:flex;gap:12px;align-items:center}.ob2 b{color:var(--ac)}
+.ic2{display:inline-block;vertical-align:middle;overflow:visible}
+.ic2 .lg{transform-box:fill-box;transform-origin:50% 0;animation:step .5s ease-in-out infinite alternate}
+.ic2 .d1,.ic2 .d2,.ic2 .d3{animation:dot 1.2s infinite}.ic2 .d2{animation-delay:.2s}.ic2 .d3{animation-delay:.4s}
+.ic2 .rec,.ic2 .sp{animation:blink 1.3s infinite}.ic2 .tk{stroke-dasharray:14;animation:draw 2.2s infinite}
+.ic2 .lf{transform-box:fill-box;transform-origin:0 100%;animation:sway 1.8s ease-in-out infinite alternate}
+nav button:not(.on) .ic2 *{animation-play-state:paused}
+@keyframes step{to{transform:rotate(28deg)}}@keyframes dot{50%{opacity:.2}}@keyframes blink{50%{opacity:.25}}@keyframes draw{0%{stroke-dashoffset:14}50%,100%{stroke-dashoffset:0}}@keyframes sway{to{transform:rotate(18deg)}}
+@media (prefers-reduced-motion:reduce){.ic2 *{animation:none!important}}
+#gate{position:fixed;inset:0;z-index:30;background:radial-gradient(120% 55% at 50% 0,#10213f,#05070c 62%);display:flex;flex-direction:column;justify-content:center;padding:calc(20px + env(safe-area-inset-top,0px)) 22px calc(20px + env(safe-area-inset-bottom,0px));overflow:auto}
+#gate[hidden]{display:none}.logo{display:grid;place-items:center;color:var(--ac);margin-bottom:6px}
+.wm{font-size:46px;font-weight:800;letter-spacing:-2px;text-align:center}.wm b{color:var(--ac)}
+.seg{display:flex;background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:4px;margin:16px 0}.seg button{flex:1;background:none;color:var(--mut);padding:10px}.seg button.on{background:var(--ac);color:#fff}
+.fld{display:flex;gap:8px}.fld select{flex:0 0 96px}#gate input,#gate select{margin-bottom:10px}
+.mk{display:inline-block;aspect-ratio:1624/614;background:var(--ac);-webkit-mask:var(--logo) center/contain no-repeat;mask:var(--logo) center/contain no-repeat}
+.hd{display:flex;align-items:center;gap:12px}.hd #pt{margin-left:auto;font-size:13px}
+.tg{color:var(--mut);font-size:14px;font-weight:500}.tg b{color:var(--ac);font-weight:800}
+</style></head><body><div id="gate" hidden></div>
+<div id="ob" hidden><div id="obtop"><button id="obb" class="ic" aria-label="Back">←</button><div class="pg"><i id="pgi"></i></div></div><div id="obm"></div><div id="obf"></div></div>
+<main>
+<h1 class="hd"><span class="mk" role="img" aria-label="CTR" style="width:66px"></span><span class="tg"><b>c</b>onquer <b>t</b>he <b>r</b>ace</span><span id="pt" class="mut"></span></h1>
+
+<section id="run" class="sec on">
+ <div class="card" id="gc" hidden></div>
+ <div class="card"><div class="big" id="tm">0:00</div>
+  <div class="row"><div class="stat"><b id="ds">0.00</b><span>km</span></div><div class="stat"><b id="pc">–:––</b><span>min/km</span></div></div>
+  <p class="mut" id="note" style="text-align:center">GPS tracks distance. No signal? Enter km below before stopping.</p>
+  <div class="mut" id="spl" style="text-align:center"></div>
+  <div class="row"><input id="man" type="number" step="0.01" placeholder="Manual km (optional)"><button id="go">Start run</button></div></div>
+ <h2>Daily readiness</h2><div class="card"><p class="mut" id="rdt">How does your body feel today?</p><div class="row" id="rd"></div></div>
+ <h2>Today’s challenges</h2><div class="card" id="chal"></div>
+ <h2>Recent runs</h2><div class="card" id="runs"></div>
+ <h2>Your stats</h2><div class="card" id="stats"></div>
+ <p class="mut" id="acct" style="text-align:center;margin-top:18px"></p>
+</section>
+
+<section id="coach" class="sec">
+ <div class="card" id="chat"><div class="msg ai">Hey, I’m Coach. Tell me what you’re training for and how your last session felt.</div></div>
+ <div class="row"><input id="q" placeholder="Ask your coach…"><button id="send" style="flex:0 0 80px">Send</button></div>
+</section>
+
+<section id="form" class="sec">
+ <div class="card"><p>Upload a short side-view clip of your running. CTR studies frames from it and gives form feedback.</p>
+  <input id="vid" type="file" accept="video/*"><p class="mut" id="fst"></p><div class="out" id="fout"></div></div>
+</section>
+
+<section id="plan" class="sec">
+ <div class="card"><div class="ob2" id="wkh" style="justify-content:space-between"></div><p class="mut" id="wks"></p><div class="row"><select id="goal" aria-label="Goal"></select>
+  <select id="days" aria-label="Days per week"></select></div>
+  <p class="row"><button id="mk">Build week 1</button><button id="stb" class="alt">Strength session</button></p><div class="out" id="pout"></div><button class="lnk" id="rst">Reset plan</button></div>
+ <div class="card out" id="sout" hidden></div><h2>Past weeks</h2><div class="card" id="ph"></div>
+</section>
+
+<section id="fuel" class="sec">
+ <div class="card"><div class="row" style="align-items:end"><div class="stat"><b id="kt">0</b><span>kcal today</span></div><div><input id="tg" type="number" aria-label="Daily target"></div></div>
+  <div class="bar" style="margin-top:10px"><i id="kb" style="width:0"></i></div><p class="mut" id="mc"></p></div>
+ <div class="card"><input id="snap" type="file" accept="image/*" capture="environment" hidden><button class="alt" id="sb" style="width:100%;margin-bottom:8px"><span data-ic="cam"></span> Snap to log a meal</button><input id="mn" placeholder="Meal, e.g. chicken rice bowl"><div class="row" style="margin-top:8px"><input id="mk2" type="number" placeholder="kcal"><button class="alt" id="est">AI estimate</button><button id="add">Add</button></div></div>
+ <div class="card" id="meals"></div>
+</section>
+<section id="rank" class="sec"><div class="card"><b>Leaderboard</b><p class="mut" id="rk">Loading…</p><div id="lb"></div><p class="mut">Earn points: 10 per km, 20 per challenge, 15 per form scan, 5 per meal.</p></div>
+<div class="card"><b>Community</b><div class="row" style="margin-top:8px"><input id="pq" placeholder="Ask athletes a question…"><button id="pp" style="flex:0 0 70px">Post</button></div></div><div id="posts"></div></section>
+</main>
+<nav id="nav"><button data-t="run" class="on"><span data-ic="run"></span>Run</button><button data-t="coach"><span data-ic="chat"></span>Coach</button><button data-t="form"><span data-ic="form"></span>Form</button><button data-t="plan"><span data-ic="plan"></span>Plan</button><button data-t="fuel"><span data-ic="fuel"></span>Fuel</button><button data-t="rank"><span data-ic="rank"></span>Rank</button></nav>
+<script>
+const $=s=>document.querySelector(s);
+const SV=(b,z)=>'<svg class="ic2" viewBox="0 0 24 24" width="'+(z||22)+'" height="'+(z||22)+'" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'+b+'</svg>';
+const FC='<circle cx="12" cy="12" r="9"/>',DT='<circle cx="9" cy="10" r="1" fill="currentColor" stroke="none"/><circle cx="15" cy="10" r="1" fill="currentColor" stroke="none"/>';
+const ICONS={
+run:SV('<circle cx="15.5" cy="4.5" r="1.9" fill="currentColor" stroke="none"/><path d="M12.5 8.5l-2.5 3 3 2.5-1 5.5"/><g class="lg"><path d="M13 14l3.5 2 .5 4.5"/></g><path d="M10 11.5l-3.5 1M13 8.5l3 2.5 3 .5"/>'),
+chat:SV('<path d="M4 5h16v10H10l-5 4v-4H4z"/><circle class="d1" cx="9" cy="10" r="1" fill="currentColor" stroke="none"/><circle class="d2" cx="12" cy="10" r="1" fill="currentColor" stroke="none"/><circle class="d3" cx="15" cy="10" r="1" fill="currentColor" stroke="none"/>'),
+form:SV('<rect x="3" y="6" width="13" height="12" rx="2"/><path d="M16 10.5l5-3v9l-5-3z"/><circle class="rec" cx="7" cy="10" r="1.3" fill="currentColor" stroke="none"/>'),
+plan:SV('<rect x="4" y="5" width="16" height="15" rx="2"/><path d="M4 10h16M9 3v4M15 3v4"/><path class="tk" d="M9 15l2 2 4-4"/>'),
+fuel:SV('<path d="M12 8.5c-3-2-7 0-6 5 .8 4 3 6.5 6 6.5s5.2-2.5 6-6.5c1-5-3-7-6-5z"/><path class="lf" d="M12 8.5c0-2 1-3.5 3-4.5"/>'),
+rank:SV('<path d="M8 4h8v5a4 4 0 0 1-8 0zM8 6H4c0 3 1 4.5 4 4.5M16 6h4c0 3-1 4.5-4 4.5M12 13v4M8 20h8"/><path class="sp" d="M20 2v3M18.5 3.5h3"/>'),
+cam:SV('<path d="M4 8h3l2-2h6l2 2h3v11H4z"/><circle class="rec" cx="12" cy="13" r="3.2"/>',20),
+bolt:SV('<path d="M13 3L6 13.5h5L10 21l8-11h-5z" fill="currentColor"/>',16),
+done:SV('<circle cx="12" cy="12" r="9"/><path class="tk" d="M8 12l3 3 5-6"/>',22),
+todo:SV('<circle cx="12" cy="12" r="9" opacity=".4"/>',22),
+mail:SV('<rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/>',18),
+phone:SV('<rect x="7" y="3" width="10" height="18" rx="2"/><path d="M11 18h2"/>',18),
+star:SV('<path d="M12 3l2.7 5.5 6 .9-4.4 4.2 1 6-5.3-2.8-5.3 2.8 1-6L3.3 9.4l6-.9z" fill="currentColor"/>',26),
+f1:SV(FC+'<path d="M8 10h2.5M13.5 10h2.5M9 16.5q3-2.5 6 0"/>',30),f2:SV(FC+DT+'<path d="M9 16q3-1.5 6 0"/>',30),
+f3:SV(FC+DT+'<path d="M9 15.5h6"/>',30),f4:SV(FC+DT+'<path d="M9 14q3 3 6 0"/>',30),
+f5:SV(FC+'<path d="M13 6l-4 6h3l-1 5 4-6h-3z" fill="currentColor" stroke="none"/>',30)};
+const big=(n,z)=>ICONS[n].replace('width="22" height="22"','width="'+z+'" height="'+z+'"');
+const ico=n=>{const e=document.createElement("span");e.innerHTML=ICONS[n];return e};
+document.querySelectorAll("[data-ic]").forEach(e=>e.innerHTML=ICONS[e.dataset.ic]);
+
+let S={};try{S=JSON.parse(localStorage.getItem("1ai")||"{}")}catch(e){}
+S.runs=S.runs||[];S.meals=S.meals||[];S.done=S.done||{};S.target=S.target||2200;
+const save=()=>{try{localStorage.setItem("1ai",JSON.stringify(S))}catch(e){}};
+const day=()=>new Date().toISOString().slice(0,10);
+const fmt=s=>Math.floor(s/60)+":"+String(Math.floor(s%60)).padStart(2,"0");
+const el=(t,txt,c)=>{const e=document.createElement(t);e.textContent=txt;if(c)e.className=c;return e};
+function addPts(n){S.pts=(S.pts||0)+n;save();$("#pt").innerHTML=ICONS.bolt+" "+S.pts+" pts";if(n)syncBoard()}
+const mark=k=>{if(S.done[day()+k])return;S.done[day()+k]=1;addPts(20);rChal()};
+const b64=b=>new Promise(r=>{const f=new FileReader();f.onload=()=>r(f.result.split(",")[1]);f.readAsDataURL(b)});
+function rAI(api){const f=async(input,o={})=>{const messages=typeof input==="string"?[{role:"user",content:input}]:input,images=o.images?await Promise.all(o.images.map(b64)):[];
+ const r=await(await fetch(api+"/ai",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({messages,images,acct:S.acct&&S.acct.id})})).json();
+ if(!r.text)throw 0;if(o.onText)o.onText({text:r.text});return{text:r.text}};
+ f.json=async p=>{const r=await f(p),m=r.text.match(/\{[\s\S]*\}/);return m?JSON.parse(m[0]):null};f.limits=async()=>({images:true});return f}
+async function AI(){try{return await window.claude.use("sample")}catch(e){return(window.ONEAI_CONFIG||{}).payApi?rAI(window.ONEAI_CONFIG.payApi):null}}
+const noAI=()=>window.claude?"AI isn’t available in this view. Open the page from your claude.ai account to use it.":"AI isn’t connected in this build. Add your server address in config.js.";
+
+$("#nav").onclick=e=>{const b=e.target.closest("button");if(!b)return;document.querySelectorAll("nav button").forEach(x=>x.classList.toggle("on",x===b));document.querySelectorAll(".sec").forEach(x=>x.classList.toggle("on",x.id===b.dataset.t))};
+
+/* RUN */
+let wid=null,t0=0,dist=0,lp=null,tk=null,spl=[],gain=0,la=null;
+const hav=(a,b)=>{const r=Math.PI/180,x=Math.sin((b.lat-a.lat)*r/2)**2+Math.cos(a.lat*r)*Math.cos(b.lat*r)*Math.sin((b.lon-a.lon)*r/2)**2;return 12742*Math.asin(Math.sqrt(x))};
+function draw(){const s=(Date.now()-t0)/1000;$("#tm").textContent=fmt(s);$("#ds").textContent=dist.toFixed(2);$("#pc").textContent=dist>.05?fmt(s/dist):"–:––";
+ while(dist>=spl.length+1)spl.push(Math.round(s));
+ $("#spl").textContent=spl.length?"Splits: "+spl.map((x,i)=>(i+1)+"km "+fmt(x-(spl[i-1]||0))).slice(-4).join(" · ")+(gain>0?" · +"+Math.round(gain)+" m":""):""}
+$("#go").onclick=()=>{
+ if(tk===null){dist=0;lp=null;spl=[];gain=0;la=null;t0=Date.now();tk=setInterval(draw,500);$("#go").textContent="Stop & save";
+  if(navigator.geolocation)wid=navigator.geolocation.watchPosition(p=>{if(p.coords.accuracy>35)return;const c={lat:p.coords.latitude,lon:p.coords.longitude},al=p.coords.altitude;if(al!=null){if(la!=null&&al-la>1)gain+=al-la;la=al}if(lp){const d=hav(lp,c);if(d>.003)dist+=d,lp=c}else lp=c},()=>{$("#note").textContent="GPS unavailable, so this is timer-only. Enter km below."},{enableHighAccuracy:true});
+ }else{
+  clearInterval(tk);tk=null;if(wid!==null)navigator.geolocation.clearWatch(wid);wid=null;
+  const s=(Date.now()-t0)/1000,km=dist>.05?dist:(parseFloat($("#man").value)||0);
+  if(s>5){S.runs.unshift({d:day(),s:Math.round(s),km:+km.toFixed(2),g:Math.round(gain)});S.runs=S.runs.slice(0,60);save();addPts(Math.round(km*10));if(km>=2)mark(":run")}
+  $("#go").textContent="Start run";$("#man").value="";rRuns();rStats()}
+};
+function rRuns(){const b=$("#runs");b.textContent="";if(!S.runs.length)b.append(el("div","No runs yet. Lace up.","mut"));
+ S.runs.slice(0,6).forEach(r=>{const l=el("div","","li");l.append(el("span",r.d+" · "+r.km+" km"+(r.g?" · +"+r.g+" m":"")),el("span",fmt(r.s)+(r.km>0?" · "+fmt(r.s/r.km)+"/km":"")));b.append(l)})}
+const POOL=["10 min mobility","Drill set: A-skips and high knees","Drink 8 glasses of water"];
+function rChal(){const b=$("#chal");b.textContent="";const mi=Math.floor(Date.now()/864e5)%3,mk=":x"+mi;
+ [[":run","Run 2 km"],[":meal","Log a meal"],[":coach","Ask your coach something"],[mk,POOL[mi]]].forEach(([k,t])=>{const l=el("div","","li");l.append(el("span",t+" (+20)"),ico(S.done[day()+k]?"done":"todo"));if(k===mk)l.onclick=()=>mark(mk);b.append(l)})}
+function rRd(){const b=$("#rd");b.textContent="";const v=S.rd&&S.rd[day()];[1,2,3,4,5].forEach((e,i)=>{const c=document.createElement("button");c.className=v===i+1?"":"alt";c.innerHTML=ICONS["f"+e];c.setAttribute("aria-label","Feeling "+e+" of 5");c.onclick=()=>{S.rd=S.rd||{};S.rd[day()]=i+1;save();rRd()};b.append(c)});
+ $("#rdt").textContent=!v?"How does your body feel today?":v>=4?"Green light. Go for the full session.":v==3?"Moderate. Keep intensity around 80%.":"Recovery day. Easy jog, mobility and extra sleep."}
+function rStats(){const b=$("#stats");b.textContent="";const now=Date.now(),wk=[0,0,0,0];S.runs.forEach(r=>{const a=Math.floor((now-new Date(r.d))/6048e5);if(a>=0&&a<4)wk[a]+=r.km});
+ const mx=Math.max(1,...wk),k28=wk.reduce((a,c)=>a+c,0),tk=S.runs.reduce((a,r)=>a+r.km,0),ts=S.runs.reduce((a,r)=>a+r.s,0),age=S.ob&&S.ob.age;
+ const r=el("div","","row");r.append(...[[S.runs.length,"runs"],[tk.toFixed(1),"km total"],[tk>0?fmt(ts/tk):"–:––","avg /km"],[age?Math.max(15,age-Math.min(10,Math.floor(k28/6))+(k28<1?2:0)):"–","Sprint Age"]].map(([v,l])=>{const d=el("div","","stat");d.append(el("b",v),el("span",l));return d}));
+ const g=el("div","","row");g.style.cssText="align-items:end;height:70px;margin-top:12px";wk.slice().reverse().forEach((v,i)=>{const c=el("div","");c.style.cssText="background:var(--ac);border-radius:6px;height:"+Math.max(4,v/mx*60)+"px";c.title=v.toFixed(1)+" km";g.append(c)});
+ b.append(r,g,el("p","Weekly km, last 4 weeks. Sprint Age is a rough estimate from your age and recent training.","mut"))}
+/* COACH */
+const hist=[];
+const tm=a=>a[0]+":"+String(a[1]).padStart(2,"0");
+const ctx=()=>(S.rd&&S.rd[day()]?"Readiness today "+S.rd[day()]+"/5; ":"")+(S.ob?"Goal "+(S.ob.ev||[]).join("/")+" target "+tm(S.ob.goal)+", PR "+(S.ob.pr?tm(S.ob.pr):"unknown")+(S.ob.hl&&S.ob.hl.rhr?", resting HR "+S.ob.hl.rhr:"")+", "+S.ob.days.length+" days/week, level "+((S.ob.lvl||[])[0]||"unknown")+"; ":"")+S.runs.slice(0,5).map(r=>r.d+" "+r.km+"km in "+fmt(r.s)).join("; ")||"no runs logged yet";
+async function ask(q){
+ const chat=$("#chat");chat.append(el("div",q,"msg me"));const a=el("div","…","msg ai");chat.append(a);
+ hist.push({role:"user",content:q});const sm=await AI();if(!sm){a.textContent=tip(q)+"\n\n(AI coach isn’t available in this view, so this is a general tip.)";hist.pop();return}
+ const sys="You are Coach, the personal running and sprint coach inside the CTR app. Talk the way a real coach talks to an athlete: direct, warm, confident, plain words, like a text from your coach. Short sentences. Say you and I. Lead with the one clear answer or instruction, then give the reason in a line or two. Ask at most one follow-up question, and only if you need it. No bullet points, no headings, no markdown, no emojis, no lectures, no disclaimers. Only if something sounds like an injury, tell them to get it checked. Stay under 80 words. Use their numbers when you have them. If they sincerely ask whether you are a person, say you are an AI coach. Athlete info: "+ctx()+".\n\n";
+ const msgs=hist.map((m,i)=>i===0?{role:"user",content:sys+m.content}:m);
+ try{const r=await sm(msgs,{cache:false,onText:({text})=>{a.textContent=text}});a.textContent=r.text;hist.push({role:"assistant",content:r.text});mark(":coach")}
+ catch(e){a.textContent="Couldn’t reach the coach right now. Try again in a moment.";hist.pop()}
+}
+const sendQ=()=>{const v=$("#q").value.trim();if(!v)return;$("#q").value="";ask(v)};
+$("#send").onclick=sendQ;$("#q").onkeydown=e=>{if(e.key==="Enter")sendQ()};
+
+/* FORM */
+async function frames(f,n){
+ const v=document.createElement("video");v.muted=true;v.playsInline=true;v.src=URL.createObjectURL(f);
+ await new Promise((ok,no)=>{v.onloadedmetadata=ok;v.onerror=no});
+ const c=document.createElement("canvas"),k=Math.min(1,640/v.videoWidth);c.width=v.videoWidth*k;c.height=v.videoHeight*k;
+ const x=c.getContext("2d"),out=[];
+ for(let i=1;i<=n;i++){v.currentTime=v.duration*i/(n+1);await new Promise(r=>v.onseeked=r);x.drawImage(v,0,0,c.width,c.height);out.push(await new Promise(r=>c.toBlob(r,"image/jpeg",.8)))}
+ return out}
+$("#vid").onchange=async e=>{
+ const f=e.target.files[0];if(!f)return;const st=$("#fst"),o=$("#fout");o.textContent="";st.textContent="Reading frames…";
+ try{const sm=await AI();if(!sm){st.textContent=noAI();return}
+  const L=await sm.limits();if(!L.images){st.textContent="Image analysis isn’t available in this view.";return}
+  const fr=await frames(f,4);st.textContent="Analyzing your stride…";
+  const r=await sm("You are CTR, a running-form analyst. These 4 frames come from one clip of a runner, in order. Give: 1) an overall form score out of 10. 2) If it looks like a sprint, score each phase out of 10 (reaction, drive, acceleration, top-end speed, finish); otherwise score posture, foot strike, arm swing and cadence. 3) The 3 biggest issues. 4) Three drills to fix them. Be specific and brief. If the footage isn’t a runner, say so.",{images:fr,cache:false,onText:({text})=>{o.textContent=text}});
+  o.textContent=r.text;st.textContent="Done. +15 pts";addPts(15)}
+ catch(err){st.textContent="Couldn’t analyze that clip. Try a shorter side-view video."}
+};
+
+/* PLAN */
+$("#stb").onclick=async()=>{const o=$("#sout"),b=$("#stb");o.hidden=false;o.textContent="Building…";b.disabled=true;
+ try{const sm=await AI();if(!sm){o.textContent=localStrength();return}
+  const r=await sm("You are CTR, a sprint-strength coach. Write one guided gym session that builds the power behind speed for this athlete: "+ctx()+". Give a 5-minute warm-up, 5 lifts with sets × reps and rest, and a short cooldown. One item per line, numbered, no paragraphs, no markdown.",{cache:false,onText:({text})=>{o.textContent=text}});o.textContent=r.text}
+ catch(e){o.textContent="Couldn’t build the session. Try again."}finally{b.disabled=false}};
+function baseVol(){const l=((S.ob&&S.ob.lvl)||["Novice"])[0],v={Beginner:10,Novice:16,Intermediate:25,Advanced:38,Competitive:50}[l]||16;return /sprint|100|200|400|speed/i.test($("#goal").value)?v*.5:v}
+function review(){const P=S.plan,a=new Date(P.start).toISOString().slice(0,10),z=new Date(P.start+7*864e5).toISOString().slice(0,10),
+ rs=S.runs.filter(r=>r.d>=a&&r.d<z),days=new Set(rs.map(r=>r.d)).size,km=rs.reduce((t,r)=>t+r.km,0),sec=rs.reduce((t,r)=>t+r.s,0),
+ rd=Object.entries(S.rd||{}).filter(([d])=>d>=a&&d<z).map(x=>x[1]),ra=rd.length?rd.reduce((t,v)=>t+v,0)/rd.length:null,
+ rate=days/P.days,prev=P.hist.length?P.hist[P.hist.length-1].pace:null,pace=km>0?Math.round(sec/km):null;let dec,f,why;
+ if(rate>=.8&&(ra==null||ra>=3)){dec="progress";f=(pace&&prev&&pace>prev*1.03)?1.04:1.08;why="You got through "+days+" of "+P.days+" sessions"+(ra!=null?" and felt good":"")+", so the load goes up."}
+ else if(rate>=.5&&(ra==null||ra>=2.5)){dec="hold";f=1;why="You did "+days+" of "+P.days+" sessions, so the load holds while you build consistency."}
+ else{dec="ease back";f=.85;why=(rate<.5?"Only "+days+" of "+P.days+" sessions got done":"Your readiness was low")+", so the load eases back."}
+ return{done:days,km,pace,rd:ra==null?null:+ra.toFixed(1),dec,f,why}}
+function localWeek(P){const n=Math.min(7,Math.max(1,P.days)),vol=baseVol()*P.eff,sp=/sprint|100|200|400|800|speed/i.test(P.goal),
+ e=Math.max(2,Math.round(vol*.22)),lg=Math.max(3,Math.round(vol*.35)),reps=Math.max(3,Math.round((sp?5:4)*P.eff)),
+ hard=sp?"Speed: "+reps+" × "+Math.min(150,60+P.w*5)+" m at 95%, full recovery (effort 9/10)":"Intervals: "+reps+" × 3 min hard, 2 min easy, plus 2 km easy before and after (effort 8/10)",
+ tempo=sp?"Tempo: "+(reps-1)+" × 200 m at 85% (effort 7/10)":"Long run: "+lg+" km easy, conversational (effort 4/10)",
+ easy="Easy run "+e+" km + 4 strides (effort 4/10)",str="Strength + mobility, 40 min (effort 6/10)",
+ seq=[hard,easy,str,tempo,easy,str,hard],D=["Mon","Tue","Wed","Thu","Fri","Sat","Sun"],idx=Array.from({length:n},(_,i)=>Math.round(i*7/n));
+ return D.map((d,i)=>{const k=idx.indexOf(i);return d+": "+(k<0?"Rest or a 20 min walk":seq[k%seq.length])}).join("\n")}
+function rPlan(){const P=S.plan,o=$("#pout"),b=$("#mk"),h=$("#wkh"),ph=$("#ph");h.textContent="";ph.textContent="";
+ if(!P){$("#wks").textContent="Your plan is built one week at a time and adjusts to how you train.";o.textContent="";b.textContent="Build week 1";b.disabled=false}
+ else{const over=Date.now()>=P.start+7*864e5,d=Math.min(7,Math.floor((Date.now()-P.start)/864e5)+1);
+  h.append(el("b","Week "+P.w,"ok"),el("span",over?"Complete":"Day "+d+" of 7","mut"));$("#wks").textContent=P.why;o.textContent=P.text;
+  b.textContent=over?"Build week "+(P.w+1):"Week "+P.w+" in progress";b.disabled=!over}
+ const H=P?P.hist.slice().reverse():[];if(!H.length)ph.append(el("div","Finished weeks show up here.","mut"));
+ H.forEach(x=>{const l=el("div","","li");l.append(el("span","Week "+x.w+" · "+x.done+"/"+x.planned+" sessions · "+x.km+" km"),el("span",x.dec,"mut"));ph.append(l)})}
+$("#mk").onclick=async()=>{
+ const b=$("#mk"),o=$("#pout");b.disabled=true;o.textContent="Building…";let P,r=null;
+ const goal=$("#goal").value,days=parseInt($("#days").value)||3;
+ if(!S.plan)P={w:1,start:Date.now(),load:1,eff:1,goal,days,hist:[],why:"Week 1 starts at a load that fits your level. After it, CTR adjusts to how you train."};
+ else{r=review();const o0=S.plan;P={w:o0.w+1,start:Date.now(),goal,days,load:+(o0.load*r.f).toFixed(2),hist:o0.hist.concat([{w:o0.w,done:r.done,planned:o0.days,km:+r.km.toFixed(1),pace:r.pace,dec:r.dec}]).slice(-12),why:r.why};
+  P.eff=+(P.load*(P.w%4===0?.8:1)).toFixed(2);if(P.w%4===0)P.why+=" This is a recovery week so your body can absorb the work."}
+ const vol=Math.round(baseVol()*P.eff);
+ let text=null;try{const sm=await AI();if(sm){const last=r?"Last week they completed "+r.done+" of "+S.plan.days+" planned sessions, ran "+r.km.toFixed(1)+" km"+(r.rd!=null?", average readiness "+r.rd+" out of 5":"")+". Decision: "+r.dec+" ("+P.why+"). ":"This is their first week. ";
+  const x=await sm("You are Coach, a running and sprint coach. Build ONLY week "+P.w+" of the athlete’s plan, Monday to Sunday. Goal: "+goal+". Training days: "+days+" per week, the other days are rest. "+last+"Target weekly volume is about "+vol+" km (for sprint goals, scale reps and distances instead). "+(P.w%4===0?"This is a recovery week, so keep it lighter. ":"")+"Athlete info: "+ctx()+". Format it as exactly 7 lines, one per day, each starting with the day name, like: Mon: Easy run 4 km, effort 4/10. Rest days just say Rest. Then a blank line and one short sentence starting with Why: that explains the week like a coach talking to the athlete. No markdown, no emojis, no paragraphs.",{cache:false,onText:({text})=>{o.textContent=text}});text=x.text}}catch(e){}
+ if(!text)text="Week "+P.w+" plan for: "+goal+" ("+days+" day"+(days>1?"s":"")+")\n\n"+localWeek(P)+"\n\nStandard template: AI isn’t available in this view.";
+ P.text=text;S.plan=P;save();addPts(10);rPlan();rGoal();b.disabled=false};
+$("#rst").onclick=()=>{const b=$("#rst");if(b.dataset.c){S.plan=null;save();rPlan();rGoal();b.dataset.c="";b.textContent="Reset plan"}else{b.dataset.c=1;b.textContent="Tap again to delete your plan and start at week 1"}};
+ 
+/* FUEL */
+let pend={};
+function rMeals(){
+ const m=S.meals.filter(x=>x.d===day()),t=m.reduce((a,x)=>a+x.k,0),sm=c=>m.reduce((a,x)=>a+(x[c]||0),0);
+ $("#kt").textContent=t;$("#tg").value=S.target;$("#kb").style.width=Math.min(100,t/S.target*100)+"%";$("#mc").textContent="Protein "+sm("p")+" g · Carbs "+sm("c")+" g · Fat "+sm("f")+" g";
+ const b=$("#meals");b.textContent="";if(!m.length)b.append(el("div","Nothing logged today.","mut"));
+ m.forEach(x=>{const l=el("div","","li");l.append(el("span",x.n),el("span",x.k+" kcal"));b.append(l)})}
+$("#tg").onchange=e=>{S.target=Math.max(500,+e.target.value||2200);save();rMeals()};
+$("#add").onclick=()=>{const n=$("#mn").value.trim(),k=Math.round(+$("#mk2").value);if(!n||!k)return;S.meals.unshift({d:day(),n,k,...pend});pend={};S.meals=S.meals.slice(0,200);save();$("#mn").value=$("#mk2").value="";addPts(5);mark(":meal");rMeals()};
+const MJ='Reply with only JSON like {"name":"Chicken rice bowl","kcal":450,"protein":30,"carbs":40,"fat":15}. ';
+function fill(j){if(!j||!+j.kcal)return false;if(j.name&&!$("#mn").value)$("#mn").value=j.name;$("#mk2").value=Math.round(+j.kcal);pend={p:Math.round(+j.protein||0),c:Math.round(+j.carbs||0),f:Math.round(+j.fat||0)};return true}
+$("#est").onclick=async()=>{
+ const n=$("#mn").value.trim();if(!n)return;const b=$("#est");b.disabled=true;b.textContent="…";
+ try{const sm=await AI();if(sm)fill(await sm.json("Estimate one typical serving of this meal: "+n+". "+MJ))}catch(e){}
+ b.disabled=false;b.textContent="AI estimate"};
+async function shrink(f){const im=await createImageBitmap(f),k=Math.min(1,800/Math.max(im.width,im.height)),c=document.createElement("canvas");c.width=im.width*k;c.height=im.height*k;c.getContext("2d").drawImage(im,0,0,c.width,c.height);return new Promise(r=>c.toBlob(r,"image/jpeg",.8))}
+$("#sb").onclick=()=>$("#snap").click();
+$("#snap").onchange=async e=>{const f=e.target.files[0];if(!f)return;const b=$("#sb");b.disabled=true;b.textContent="Reading your meal…";
+ try{const sm=await AI();if(!sm)throw 0;const L=await sm.limits();if(!L.images)throw 0;const r=await sm("Identify this meal and estimate calories and macros for the portion shown. "+MJ,{images:[await shrink(f)],cache:false});const m=r.text.match(/\{[\s\S]*\}/);if(!fill(m&&JSON.parse(m[0])))throw 0;b.innerHTML=ICONS.cam+" Snap to log a meal"}
+ catch(err){b.textContent="Couldn’t read that photo. Type the meal instead."}
+ b.disabled=false;e.target.value=""};
+
+/* ONBOARDING */
+const TL=[
+{k:"type",t:"What are you training for?",s:"Pick the one that fits. You can change it later.",o:[["Health & Fitness","Improve heart health and VO2 max, burn fat, get stronger"],["Track & Field","Compete in your events and meets"]]},
+{k:"age"},
+{k:"spec",t:"What do you specialize in?",o:[["Sprints","Explosive speed"],["Distance","Track 800m–10k"],["Road Running","5K to marathon"],["Hurdles","Speed + clearance"],["Jumps","Horizontal & vertical"],["Throws","Strength & technique"]]},
+{k:"ev",t:"Pick your event(s)",s:"Choose up to 3. We train them together.",max:3,o:["100m","200m","400m","800m","1500m","Mile","3000m","5000m","10000m"].map(x=>[x])},
+{k:"pr",t:"What’s your PR right now?",s:"This is the number we’re going to beat.",time:[2,10],skip:"I don’t know it yet"},
+{k:"lose",t:"Where do you lose your races?",s:"Name the one or two places you leave the most on the table.",max:2,chips:["Pace Control","Finishing Kick","Base Endurance","Lactate Threshold","Mental Toughness","Running Economy","Hill Running","Consistency"]},
+{k:"days"},
+{k:"lvl",t:"Where are you right now?",s:"This sets where your plan begins. Honest beats impressive.",o:[["Beginner","New to structured training"],["Novice","A season or two in"],["Intermediate","Train consistently"],["Advanced","Years of racing"],["Competitive","Regional-level times"]]},
+{k:"goal",t:"What are you chasing?",time:[1,55],btn:"Lock it in"},
+{k:"real",t:"Following a real plan today?",s:"No judgment. It just tells us where to start.",o:[["Yes, a real plan","Structured week, knows what’s next"],["Sort of","Some structure, lots of guessing"],["Mostly winging it","Show up and figure it out"]]},
+{k:"dest",t:"Where’s this going?",s:"Pick up to 3. We’ll build backward from them.",max:3,o:[["Finish my first race","Cross a start and a finish line"],["Set a new personal best","Beat the clock I run today"],["Go the distance","Train up to a half or full"],["Place at championships","Race with the best in my region"],["Chase an elite standard","Qualify for something national"]]},
+{k:"tgt"},{k:"gap"},{k:"demo"},{k:"rate"},{k:"rem"},{k:"hl"},{k:"build"}];
+const OB={};let ci=0;
+function finish(){S.ob=OB;S.onb=1;save();$("#ob").hidden=true;rGoal();prefillPlan()}
+function rGoal(){const g=$("#gc");if(!S.ob){g.hidden=true;return}g.hidden=false;g.textContent="";g.append(el("div",((S.ob.ev||[])[0]||"Your goal")+" · target "+tm(S.ob.goal),"ob2"),el("div",S.ob.days.length+" days a week · "+((S.ob.lose||[])[0]||"all-round")+" focus","mut"));if(S.plan&&Date.now()>=S.plan.start+7*864e5)g.append(el("div","Week "+S.plan.w+" is done. Build week "+(S.plan.w+1)+" in the Plan tab.","ok"))}
+function show(i){
+ ci=i;const st=TL[i],k=st.k,m=$("#obm"),f=$("#obf");m.textContent="";f.textContent="";
+ $("#pgi").style.width=(i+1)/TL.length*100+"%";$("#obb").style.visibility=i?"visible":"hidden";
+ const H=(t,s)=>{m.append(el("h2",t,"oh"));if(s)m.append(el("p",s,"mut"))};
+ const next=(l,fn)=>{const b=el("button",l,"btn");b.onclick=fn||(()=>show(i+1));f.append(b);return b};
+ const skip=(l,fn)=>{const b=el("button",l,"lnk");b.onclick=fn||(()=>show(i+1));f.append(b)};
+ if(st.o||st.chips){H(st.t,st.s);const sel=OB[k]=OB[k]||[],mx=st.max||1,b=next("Continue"),box=el("div","",st.chips?"chips":"opts");
+  const paint=()=>{[...box.children].forEach(x=>x.classList.toggle("sel",sel.includes(x.dataset.n)));b.disabled=!sel.length};
+  (st.o||st.chips.map(x=>[x])).forEach(([n,d])=>{const c=el("button","",st.chips?"chip":"opt");c.dataset.n=n;c.append(el("b",n));if(d)c.append(el("small",d));
+   c.onclick=()=>{if(sel.includes(n))sel.splice(sel.indexOf(n),1);else{if(mx==1)sel.length=0;if(sel.length<mx)sel.push(n)}paint()};box.append(c)});
+  m.append(box);paint()}
+ else if(st.time){H(st.t,st.s);const v=OB[k]=OB[k]||st.time.slice(),d=el("div",tm(v),"tbig"),r=el("div","","row");
+  [0,1].forEach(j=>{const s=document.createElement("select");for(let x=0;x<=(j?59:30);x++){const o=el("option",j?String(x).padStart(2,"0"):x);o.value=x;s.append(o)}s.value=v[j];s.onchange=()=>{v[j]=+s.value;d.textContent=tm(v)};r.append(s)});
+  m.append(d,r);next(st.btn);if(st.skip)skip(st.skip,()=>{OB[k]=null;show(i+1)})}
+ else if(k==="days"){H("Which days do you train?","Tap the days you train. We build your plan around them.");const dd=OB.days=OB.days||[],b=next("Continue"),row=el("div","","dots"),cnt=el("div","","mut");
+  const paint=()=>{[...row.children].forEach(c=>c.classList.toggle("sel",dd.includes(+c.dataset.n)));cnt.textContent=dd.length+" day"+(dd.length==1?"":"s")+" a week";b.disabled=!dd.length};
+  "MTWTFSS".split("").forEach((x,j)=>{const c=el("button",x,"dot");c.dataset.n=j;c.onclick=()=>{dd.includes(j)?dd.splice(dd.indexOf(j),1):dd.push(j);paint()};row.append(c)});
+  m.append(row,cnt,el("h3","Training around an injury?"),el("p","Optional. We’ll manage your load and add pre-hab.","mut"));
+  const o=el("div","","opts");OB.inj=OB.inj||"No, I’m healthy";["Yes, I’m managing something","No, I’m healthy"].forEach(n=>{const c=el("button",n,"opt");const pt=()=>[...o.children].forEach(x=>x.classList.toggle("sel",x.textContent===OB.inj));c.onclick=()=>{OB.inj=n;pt()};o.append(c)});
+  m.append(o);o.children[0].onclick&&0;[...o.children].forEach(x=>x.classList.toggle("sel",x.textContent===OB.inj));paint()}
+ else if(k==="age"){H("How old are you?","We use it to estimate your Sprint Age.");const v=OB.age=OB.age||25,d=el("div",v,"tbig"),sl=document.createElement("select");for(let x=14;x<=80;x++){const o=el("option",x);o.value=x;sl.append(o)}sl.value=v;sl.onchange=()=>{OB.age=+sl.value;d.textContent=OB.age};m.append(d,sl);next("Continue")}
+ else if(k==="tgt"){H("Hitting "+tm(OB.goal)+" is a realistic target. You’re closer than you think.","Two things decide it. You control both.");
+  [["01","The right plan","Periodized for your "+((OB.ev||[])[0]||"event")+", not guesswork"],["02","Your discipline","Showing up "+OB.days.length+" days a week, every week"]].forEach(([n,t,d])=>{const c=el("div","","card ob2");c.append(el("b",n),el("div",""));c.lastChild.append(el("b",t),el("div",d,"mut"));c.lastChild.firstChild.style.color="var(--tx)";m.append(c)});next("I’m in")}
+ else if(k==="gap"){H("CTR gets you there.","Your season, drawn from your own numbers.");const c=el("div","","card");c.innerHTML='<svg viewBox="0 0 300 130" width="100%" role="img" aria-label="Illustrative chart: progress with CTR rises faster than progress alone"><path d="M10 105 L290 92" stroke="#6b7280" stroke-width="2" fill="none"/><path d="M10 105 C120 102 200 80 290 20" stroke="#3b82f6" stroke-width="3" fill="none"/></svg>';m.append(c,el("p","That gap is what training to a plan is worth.","ok"),el("p","Illustrative, not a promise of results.","mut"));next("Continue")}
+ else if(k==="demo"){H("See your form, scored.","A sample scan. Yours runs on your own clip in the Form tab.");const bar=el("div","","bar"),fl=document.createElement("i"),lab=el("p","Measuring stride & cadence…","mut"),res=el("div"),b=next("Continue");bar.append(fl);m.append(el("span","DEMO","badge"),bar,lab,res);b.disabled=true;let p=0;
+  const iv=setInterval(()=>{if(ci!==i){clearInterval(iv);return}p+=5;fl.style.width=p+"%";if(p>=100){clearInterval(iv);lab.textContent="Scan complete";const r=el("div","","ring");r.style.setProperty("--p",61);r.append(el("span","61"));res.append(r);[["✓","Cadence","Quick, efficient turnover","ok"],["!","Overstride","Reaching out ahead of you","warn"],["!","Hip drop","Leaking power every step","warn"]].forEach(([g,t,d,c])=>{const l=el("div","","card ob2");l.append(el("b",g,c),el("div",""));l.lastChild.append(el("b",t),el("div",d,"mut"));l.lastChild.firstChild.style.color="var(--tx)";res.append(l)});b.disabled=false}},110)}
+ else if(k==="rate"){const t1=el("div","","big ok"),t2=el("div","","big ok");t1.innerHTML=big("rank",72);t2.innerHTML=ICONS.star.repeat(5);m.append(t1,t2);H("Help other athletes find CTR.","A quick rating helps us reach more people who need a real coach.");next("Continue")}
+ else if(k==="rem"){["Today’s session|4 × 400m at goal pace. Spikes on.","Rest day|Recovery counts. Sleep early tonight.","Race week|Ease the volume and stay sharp."].forEach(x=>{const [t,d]=x.split("|"),c=el("div","","card");c.append(el("b",t),el("div",d,"mut"));m.append(c)});H("Never miss the session.","A nudge for every session. No spam, ever.");
+  next("Turn on reminders",()=>{try{Notification.requestPermission()}catch(e){}show(i+1)});skip("Maybe later")}
+ else if(k==="hl"){H("Your recovery numbers","Optional. Add them so your readiness advice is more accurate.");const hh=OB.hl=OB.hl||{};[["rhr","Resting heart rate (bpm)"],["sleep","Average sleep (hours)"],["vo2","VO2 max (if you know it)"]].forEach(([id,l])=>{const inp=document.createElement("input");inp.type="number";inp.placeholder=l;inp.setAttribute("aria-label",l);inp.value=hh[id]||"";inp.oninput=()=>hh[id]=+inp.value||0;inp.style.marginTop="10px";m.append(inp)});next("Continue");skip("Skip")}
+ else if(k==="build"){m.append(el("p","BUILDING YOUR PLAN","kick"));H("Around your numbers");const L=[(OB.ev||[])[0]||"Your event","Target "+tm(OB.goal),OB.days.length+" days a week","Attacking your "+((OB.lose||[])[0]||"pace"),"Referencing your form analysis"],ul=el("div");m.append(ul);let n=0;
+  const iv=setInterval(()=>{if(ci!==i){clearInterval(iv);return}if(n<L.length)ul.append(el("div","✓ "+L[n++],"li ok"));else{clearInterval(iv);finish()}},650)}
+}
+$("#obb").onclick=()=>show(Math.max(0,ci-1));
+
+/* ENTER + LOGIN */
+function rAcct(){const a=$("#acct");a.textContent="";if(!S.acct)return;const b=el("button","Sign out","lnk");b.style.cssText="display:inline;width:auto;margin:0;padding:0 0 0 6px;text-decoration:underline";b.onclick=()=>{S.acct=null;save();rAcct();gate("enter")};a.append("Signed in as "+S.acct.id+(active()?" · "+(S.sub.plan==="y"?"Yearly":"28-day")+" plan until "+new Date(S.sub.exp).toLocaleDateString()+(S.sub.test?" (test)":""):"")+" ·",b)}
+const CFG=window.ONEAI_CONFIG||{};
+const active=()=>!!(S.sub&&S.sub.exp>Date.now()&&(!S.sub.test||!CFG.payApi));
+function enter(){rAcct();if(!active()){gate("pay");return}$("#gate").hidden=true;if(S.onb)rGoal();else{$("#ob").hidden=false;show(0)}checkSub()}
+async function checkSub(){if(!CFG.payApi||!S.acct)return;try{const r=await(await fetch(CFG.payApi+"/status?acct="+encodeURIComponent(S.acct.id))).json();if(r.active){S.sub={plan:r.plan,exp:r.exp};save();rAcct()}else{S.sub=null;save();gate("pay")}}catch(e){}}
+const loadRzp=()=>window.Razorpay?Promise.resolve():new Promise((ok,no)=>{const s=document.createElement("script");s.src="https://checkout.razorpay.com/v1/checkout.js";s.onload=ok;s.onerror=no;document.head.append(s)});
+async function pay(plan,msg,btn){
+ if(!CFG.payApi){msg.textContent="Payments aren’t connected in this build.";return}
+ const H={"Content-Type":"application/json"},api=CFG.payApi;btn.disabled=true;msg.textContent="Starting checkout…";
+ try{const o=await(await fetch(api+"/order",{method:"POST",headers:H,body:JSON.stringify({plan,acct:S.acct.id})})).json();if(!o.orderId)throw 0;await loadRzp();
+  const resp=await new Promise((ok,no)=>{new Razorpay({key:o.keyId,amount:o.amount,currency:"INR",name:"CTR",description:plan==="y"?"CTR Pro, 1 year":"CTR Pro, 28 days",order_id:o.orderId,prefill:S.acct.t==="g"?{email:S.acct.id}:{contact:S.acct.id},theme:{color:"#3b82f6"},handler:ok,modal:{ondismiss:()=>no("cancel")}}).open()});
+  msg.textContent="Confirming payment…";
+  const v=await(await fetch(api+"/verify",{method:"POST",headers:H,body:JSON.stringify({...resp,plan,acct:S.acct.id})})).json();if(!v.ok)throw 0;
+  S.sub={plan:v.plan,exp:v.exp};save();enter()}
+ catch(e){msg.textContent=e==="cancel"?"Payment cancelled.":"We couldn’t confirm the payment. If you were charged, wait a minute and tap Restore purchase."}
+ btn.disabled=false}
+async function restore(msg){msg.textContent="Checking…";try{const r=await(await fetch(CFG.payApi+"/status?acct="+encodeURIComponent(S.acct.id))).json();if(r.active){S.sub={plan:r.plan,exp:r.exp};save();enter()}else msg.textContent="No active plan found for this account."}catch(e){msg.textContent="Couldn’t reach the payment server."}}
+function gate(v,mode){const g=$("#gate");g.hidden=false;g.textContent="";$("#ob").hidden=true;
+ if(v==="enter"){const l=el("div","","logo"),t=el("p","","tg");l.innerHTML='<span class="mk" role="img" aria-label="CTR" style="width:min(78vw,300px)"></span>';t.innerHTML="<b>c</b>onquer <b>t</b>he <b>r</b>ace";t.style.cssText="text-align:center;font-size:18px;margin:14px 0 0";
+  const gs=el("button","Get Started","btn"),si=el("button","Already have an account? Sign in","lnk");gs.style.marginTop="40px";gs.onclick=()=>gate("login","up");si.onclick=()=>gate("login","in");g.append(l,t,gs,si);return}
+ if(v==="pay"){let plan="m";g.append(el("h2","Choose your plan","oh"),el("p","Pay to unlock CTR. Renew any time.","mut"));
+  const box=el("div","","opts"),msg=el("p","","warn"),go=el("button","","btn"),upd=()=>{[...box.children].forEach(c=>c.classList.toggle("sel",c.dataset.n===plan));go.textContent="Pay "+(plan==="y"?"₹999":"₹99")};
+  [["m","28 days","₹99","About ₹3.5 per day"],["y","1 year","₹999","Best value, save about 22%"]].forEach(([k,t,pr,d])=>{const c=el("button","","opt"),r=el("div","","li");c.dataset.n=k;r.style.border="0";r.style.padding="0";r.append(el("b",t),el("b",pr));c.append(r,el("small",d));c.onclick=()=>{plan=k;upd()};box.append(c)});
+  const ft=el("div");ft.style.margin="14px 0";["Personalised workouts","AI form analyzer","Nutrition tracking","AI coach"].forEach(x=>ft.append(el("div","✓ "+x,"li")));
+  go.onclick=()=>pay(plan,msg,go);g.append(box,ft,go,msg);
+  if(CFG.payApi){const rs=el("button","Restore purchase","lnk");rs.onclick=()=>restore(msg);g.append(el("p","Secure checkout by Razorpay: UPI, cards and netbanking.","mut"),rs)}
+  else{g.append(el("p","Payments are locked until a live HTTPS payment server is configured. Test unlock is disabled.","warn"))}
+  const so=el("button","Sign out","lnk");so.onclick=()=>{S.acct=null;save();rAcct();gate("enter")};g.append(so);upd();return}
+ let tab="g";const seg=el("div","","seg"),body=el("div"),err=el("p","","warn");
+ const em=document.createElement("input");em.type="email";em.placeholder="you@gmail.com";em.autocomplete="email";em.setAttribute("aria-label","Gmail address");
+ const cc=document.createElement("select");["+91","+1","+44","+61","+971","+234","+254","+27"].forEach(c=>cc.append(el("option",c)));cc.setAttribute("aria-label","Country code");
+ const ph=document.createElement("input");ph.type="tel";ph.inputMode="numeric";ph.placeholder="Mobile number";ph.setAttribute("aria-label","Mobile number");
+ const f=el("div","","fld");f.append(cc,ph);
+ const tabs=[["g","mail","Gmail"],["m","phone","Mobile"]].map(([k,i,t])=>{const b=document.createElement("button");b.innerHTML=ICONS[i]+" "+t;b.onclick=()=>{tab=k;view()};seg.append(b);return b});
+ const view=()=>{tabs.forEach((b,i)=>b.classList.toggle("on",(i?"m":"g")===tab));body.textContent="";body.append(tab==="g"?em:f);err.textContent=""};
+ const go=el("button",mode==="in"?"Sign in":"Continue","btn"),bk=el("button","Back","lnk");
+ go.onclick=()=>{err.textContent="Sign-in is not connected yet. Configure Firebase Authentication (Google sign-in and phone OTP) before using CTR accounts."};
+ bk.onclick=()=>gate("enter");
+ g.append(el("h2",mode==="in"?"Welcome back":"Create your account","oh"),el("p","Google sign-in and phone OTP will be available after Firebase Authentication is configured.","mut"),seg,body,err,go,el("p","For security, CTR will not create a local account from an unverified email address or phone number.","mut"),bk);view()}
+if(!S.acct)gate("enter");else enter();
+
+/* PLAN OPTIONS + OFFLINE FALLBACKS */
+const GOALS=["Run my first 5K","Faster 5K","Faster 10K","Half marathon","Marathon","100m sprint","200m sprint","400m","800m","1500m / Mile","3000m / 5000m","Sprint speed","Lose fat","Build endurance","General fitness"];
+GOALS.forEach(g=>$("#goal").append(el("option",g)));
+for(let d=1;d<=7;d++)$("#days").append(el("option",d+(d>1?" days":" day")));
+function prefillPlan(){const o=S.ob;if(!o)return;$("#days").value=o.days.length+(o.days.length>1?" days":" day");const e=((o.ev||[])[0]||"").toLowerCase(),m=e&&GOALS.find(g=>g.toLowerCase().includes(e));if(m)$("#goal").value=m}
+function localStrength(){return "Sprint strength session\n\nWarm-up (5 min): leg swings, glute bridges, A-skips\n\n1. Back squat 4 × 5, rest 2–3 min\n2. Romanian deadlift 3 × 6, rest 2 min\n3. Walking lunges 3 × 10 per leg, rest 90 s\n4. Box jumps 4 × 4, rest 90 s\n5. Plank 3 × 45 s, rest 45 s\n\nCooldown: 5 min easy walk, hip and hamstring stretches.\n\nAI isn’t available in this view, so this is a standard session."}
+const tip=q=>/pace|speed|fast|sprint/i.test(q)?"Here’s the deal. One hard session a week, short strides on the easy days, and keep the easy days truly easy. Speed comes from recovering well.":/recover|sore|rest|tired/i.test(q)?"Take an easy day, sleep early and eat enough protein. Most of your recovery happens there. If the pain sticks around, get it checked.":/race|taper/i.test(q)?"Cut your volume by about a third this last week, keep a few short race-pace efforts, and don’t try anything new. Trust the work you’ve done.":"Keep most of your runs easy, add one quality session a week, and build slowly, about 10% a week. What are you training for right now?";
+prefillPlan();rPlan();
+
+/* RANK */
+let DB=null,UID=null,USR=null,POSTS=[],REPS=[];
+async function nm(ids){try{const p=await USR.profiles(ids);return i=>(p[i]&&p[i].name)||"Athlete"}catch(e){return()=>"Athlete"}}
+function syncBoard(){if(DB&&UID)DB.doc("board/"+UID).set({pts:S.pts||0}).catch(()=>{})}
+async function drawBoard(rows){const n=await nm(rows.map(r=>r.id)),b=$("#lb");b.textContent="";rows.forEach((r,i)=>{const l=el("div","","li");l.append(el("span",(i+1)+". "+n(r.id)+(r.id===UID?" (you)":"")),el("span",r.pts+" pts"));b.append(l)});$("#rk").textContent=rows.length?"Top athletes by points.":"No one on the board yet. Earn points to be first."}
+async function drawPosts(){const n=await nm([...new Set(POSTS.map(p=>p.by).concat(REPS.map(r=>r.by)))]),box=$("#posts");box.textContent="";
+ POSTS.forEach(p=>{const c=el("div","","card");c.append(el("b",n(p.by)),el("div",p.t));REPS.filter(r=>r.pid===p.id).forEach(r=>c.append(el("div","↳ "+n(r.by)+": "+r.t,"mut")));
+  const row=el("div","","row"),i=document.createElement("input"),b=el("button","Reply","alt");i.placeholder="Reply…";b.style.flex="0 0 70px";
+  b.onclick=()=>{const t=i.value.trim();if(t){DB.collection("replies").add({pid:p.id,t:t.slice(0,280),by:UID,ts:Date.now()}).catch(()=>{});i.value=""}};row.append(i,b);c.append(row);box.append(c)})}
+$("#pp").onclick=()=>{const t=$("#pq").value.trim();if(t&&DB){DB.collection("posts").add({t:t.slice(0,280),by:UID,ts:Date.now()}).catch(()=>{});$("#pq").value=""}};
+(async()=>{try{DB=await claude.use("db");USR=await claude.use("user");UID=USR&&await USR.id()}catch(e){}
+ if(!DB||!UID){DB=null;$("#rk").textContent=window.claude?"Open this page signed in to claude.ai to join the leaderboard and community.":"Leaderboard and community aren’t available in this build yet.";return}
+ syncBoard();
+ DB.collection("board").orderBy("pts","desc").limit(20).onSnapshot(sn=>drawBoard(sn.docs.map(d=>({id:d.id,pts:d.data().pts||0}))),()=>{});
+ DB.collection("posts").orderBy("ts","desc").limit(15).onSnapshot(sn=>{POSTS=sn.docs.map(d=>({id:d.id,...d.data()}));drawPosts()},()=>{});
+ DB.collection("replies").orderBy("ts","asc").limit(150).onSnapshot(sn=>{REPS=sn.docs.map(d=>d.data());drawPosts()},()=>{})})();
+rRuns();rChal();rMeals();rStats();rRd();addPts(0);
+</script></body></html>
