@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "433786529603",
+    "project_id": "oneai-7d8a2",
+    "storage_bucket": "oneai-7d8a2.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:433786529603:android:7ef742978a0dad218331f6",
+        "android_client_info": {
+          "package_name": "com.oneai.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAKeio-OHvqv5NVQRs6WHaqmpXyAU08CqI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
