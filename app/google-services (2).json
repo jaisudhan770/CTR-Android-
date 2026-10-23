@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "656995238011",
+    "project_id": "ctr-android",
+    "storage_bucket": "ctr-android.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:656995238011:android:daab0a8921a86bb108e2de",
+        "android_client_info": {
+          "package_name": "Com.oneai.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "656995238011-14t7kbhjcuhu83cucjhq34l6dc70pvve.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyASLa2HSu9HS0JDf2ld2JPIlfPA1qNpSPU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "656995238011-14t7kbhjcuhu83cucjhq34l6dc70pvve.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:656995238011:android:e2109ebb5a59274b08e2de",
+        "android_client_info": {
+          "package_name": "com.oneai.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "656995238011-14t7kbhjcuhu83cucjhq34l6dc70pvve.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyASLa2HSu9HS0JDf2ld2JPIlfPA1qNpSPU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "656995238011-14t7kbhjcuhu83cucjhq34l6dc70pvve.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
